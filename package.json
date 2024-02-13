@@ -1,0 +1,11 @@
+{
+  "name": "s48_quickkeys",
+  "version": "1.0.0",
+  "description": "IDEA: Making a list of most useful keyboard shortcut keys and commands \r project name : QuickKeys",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
