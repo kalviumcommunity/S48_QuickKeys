@@ -1,89 +1,96 @@
-/* landingpage.css */
-
-/* Reset default margin and padding */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  /* Style for the navigation bar */
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #333;
-    color: white;
-  }
-  
-  .logo {
-    font-size: 24px;
-  }
-  
-  .navbar-buttons {
-    display: flex;
-  }
-  
-  .button {
-    padding: 10px 20px;
-    background-color: #555;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    color: white;
-    cursor: pointer;
-  }
-  
-  .button:hover {
-    background-color: #444;
-  }
-  
-  .liked-button {
-    margin-left: 10px;
-    padding: 10px 20px;
-    background-color: #555;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    color: white;
-  }
-  
-  .liked-button:hover {
-    background-color: #444;
-  }
-  
-  /* Style for the main content */
-  .content {
-    display: flex;
-    justify-content: space-between; /* Ensures boxes touch each other */
-    align-items: center;
-    padding: 20px;
-    overflow-x: auto; /* Allow horizontal scrolling if necessary */
-  }
-  
-  .shortcut-box {
-    flex: 0 0 auto; /* Prevent boxes from shrinking */
-    width: calc((100% - 60px) / 3); /* Calculate width dynamically based on available space */
-    height: 300px;
-    padding: 20px;
-    margin: 20px 0; /* Adjust vertical margin */
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  
-  .shortcut-box:hover {
-    transform: scale(1.05);
-  }
-  
-  .shortcut-box h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-  
-  .shortcut-box p {
-    font-size: 16px;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+}
+
+.logo {
+  font-size: 24px;
+}
+
+.navbar-buttons {
+  display: flex;
+}
+
+.button {
+  padding: 10px 20px;
+  background-color: #555;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #444;
+}
+
+.liked-button {
+  margin-left: 10px;
+  padding: 10px 20px;
+  background-color: #555;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+}
+
+.liked-button:hover {
+  background-color: #444;
+}
+
+.content {
+  overflow-y: auto; /* Enable vertical scrolling */
+  padding: 20px;
+}
+
+.shortcut-box {
+  width: calc(100% - 40px); /* Set width for each box */
+  margin-bottom: 20px; /* Add margin between boxes */
+  background-color: #f9f9f9; /* Add background color */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  transition: background-color 0.3s ease; /* Transition background color */
+}
+
+.shortcut-box h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.shortcut-box p {
+  font-size: 16px;
+}
+
+/* Remove hover effect */
+.shortcut-box:hover {
+  background-color: #f9f9f9; /* Keep background color same on hover */
+}
+
+/* Add scrollbar */
+.content::-webkit-scrollbar {
+  width: 10px;
+}
+
+.content::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.content::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+.content::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

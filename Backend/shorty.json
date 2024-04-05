@@ -1,0 +1,53 @@
+[
+    {
+      "name": "Create Document",
+      "shortcut": "Ctrl + N",
+      "description": "Create a new document in the MongoDB data page."
+    },
+    {
+      "name": "Save Document",
+      "shortcut": "Ctrl + S",
+      "description": "Save the changes made to the current document on the MongoDB data page."
+    },
+    {
+      "name": "Open Document",
+      "shortcut": "Ctrl + O",
+      "description": "Open an existing document from the MongoDB data page."
+    },
+    {
+      "name": "Undo",
+      "shortcut": "Ctrl + Z",
+      "description": "Undo the last action performed on the MongoDB data page."
+    },
+    {
+      "name": "Redo",
+      "shortcut": "Ctrl + Y",
+      "description": "Redo the last undone action on the MongoDB data page."
+    },
+    {
+      "name": "Copy",
+      "shortcut": "Ctrl + C",
+      "description": "Copy selected data or text on the MongoDB data page."
+    },
+    {
+      "name": "Cut",
+      "shortcut": "Ctrl + X",
+      "description": "Cut selected data or text on the MongoDB data page."
+    },
+    {
+      "name": "Paste",
+      "shortcut": "Ctrl + V",
+      "description": "Paste copied or cut data or text on the MongoDB data page."
+    },
+    {
+      "name": "Select All",
+      "shortcut": "Ctrl + A",
+      "description": "Select all content on th``e MongoDB data page."
+    },
+    {
+      "name": "Find",
+      "shortcut": "Ctrl + F",
+      "description": "Open the find dialog to search for specific content within the MongoDB data page."
+    }
+  ]
+  
