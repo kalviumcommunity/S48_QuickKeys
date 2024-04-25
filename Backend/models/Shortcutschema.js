@@ -17,6 +17,6 @@ const shortcutSchema = new mongoose.Schema({
 });
 
 // Create model based on schema
-const Shortcut = mongoose.model('Shortcut', shortcutSchema);
+const QuickKey= mongoose.model('QuickKey', shortcutSchema);
 
-module.exports = Shortcut;
+module.exports = QuickKey;

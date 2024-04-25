@@ -1,17 +1,14 @@
-import { useState } from 'react'
-import './App.css'
-import LandingPage from './components/landingpage'
-import { Routes,Route } from 'react-router-dom' 
-function App() {
+import { Routes, Route } from 'react-router-dom';
+import LandingPage from './components/landingpage';
+import AddEntity from './components/addentity'; // Import AddEntity component
 
+function App() {
   return (
-    <>
     <Routes>
-      <Route path="/" element={<LandingPage/>}></Route>
+      <Route path="/" element={<LandingPage />} />
+      <Route path="/shortcuts" element={<AddEntity />} /> {/* Add this route */}
     </Routes>
-    
-     </>
-  )
+  );
 }
 
-export default App
+export default App;
