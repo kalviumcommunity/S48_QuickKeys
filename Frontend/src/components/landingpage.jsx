@@ -19,12 +19,19 @@ const LandingPage = () => {
     }
   };
 
+  // Function to handle "Add a Key" button click
+  const handleAddKey = () => {
+    // Implement functionality to add a key
+    console.log('Add a Key button clicked');
+  };
+
   return (
     <div className="landing-page">
       <nav className="navbar">
         <div className="logo">QuickKeys</div>
         <div className="navbar-buttons">
           <Link to="/login" className="button">Login / Signup</Link>
+          <Link to="/shortcuts" className="button">Add a Key</Link>
         </div>
       </nav>
       <div className="content">
