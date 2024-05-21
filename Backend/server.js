@@ -68,3 +68,32 @@ app.listen(port, () => {
 
     // Connect to MongoDB Atlas when the server starts
 });
+app.get('/shortcuts/:id', async (req, res) => {
+  try {
+    const shortcut = await QuickKey.findById(req.params.id);
+    res.json(shortcut);
+  } catch (error) {
+    console.error('Error fetching shortcut:', error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+});
+
+// PUT endpoint to update an entity
+app.put('/updateentity/:id', async (req, res) => {
+  try {
+    const updatedEntity = await QuickKey.findByIdAndUpdate(req.params.id, req.body, { new: true });
+    res.json(updatedEntity);
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
+
+// DELETE endpoint to delete an entity
+app.delete('/shortcuts/:id', async (req, res) => {
+  try {
+    await QuickKey.findByIdAndDelete(req.params.id);
+    res.json({ message: 'Entity deleted successfully' });
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
