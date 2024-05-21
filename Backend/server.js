@@ -3,6 +3,7 @@ const { MongoClient } = require('mongodb');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const fs = require('fs');
+const Joi = require('joi');
 require('dotenv').config();
 const QuickKey = require('./models/Shortcutschema');
 
@@ -28,6 +29,11 @@ const shortcutSchema = new mongoose.Schema({
     shortcut: String
 });
 
+const createEntity = Joi.object({
+  name: Joi.string().required(),
+  description: Joi.string().required(),
+  shortcut: Joi.string().required()
+});
 // Create a model based on the schema
 
 // Home route
@@ -47,10 +53,12 @@ app.get('/dummy-data', (req, res) => {
 app.post('/shortcuts', async (req, res) => {
     try {
         // Extract data from request body
-        const { name,  shortcut , description} = req.body;
+
+        const value = await createEntity.validateAsync(req.body);
+
+        const newShortcut = new QuickKey(value);
 
         // Create a new shortcut instance
-        const newShortcut = new QuickKey({ name, description, shortcut });
 
         // Save the new shortcut to the database
         await newShortcut.save();
