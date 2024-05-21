@@ -21,8 +21,9 @@
   display: flex;
 }
 
-.button {
+.update,.delete,.login,.key {
   padding: 10px 20px;
+  margin-left: 10px;
   background-color: #555;
   border: none;
   border-radius: 5px;
@@ -31,7 +32,7 @@
   cursor: pointer;
 }
 
-.button:hover {
+.update:hover,.delete:hover {
   background-color: #444;
 }
 
@@ -93,4 +94,15 @@
 
 .content::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+.da-buttons {
+  /* ... other styles ... */
+  display: flex;
+  justify-content: flex-end; /* Align buttons to the end */
+  align-items: center; /* Center buttons vertically */
+  margin-bottom: 0; /* Remove margin-bottom */
+}
+h4{
+  margin-top: 20px;
 }
